@@ -14,7 +14,7 @@ const schema = z.object({
   consent: z.literal(true),
 });
 
-const ZAPIER_HOOK = "https://hooks.zapier.com/hooks/catch/15102711/4oq2sk0/";
+const ZAPIER_HOOK = process.env.ZAPIER_HOOK_URL;
 
 export async function POST(req: NextRequest) {
   let payload: unknown;
@@ -66,11 +66,15 @@ export async function POST(req: NextRequest) {
     console.warn("[lead] Supabase not configured — pomijam zapis do bazy");
   }
 
-  fetch(ZAPIER_HOOK, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(lead),
-  }).catch((e) => console.error("[lead] zapier error:", e));
+  if (ZAPIER_HOOK) {
+    fetch(ZAPIER_HOOK, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(lead),
+    }).catch((e) => console.error("[lead] zapier error:", e));
+  } else {
+    console.warn("[lead] ZAPIER_HOOK_URL not configured — pomijam webhook");
+  }
 
   return NextResponse.json({ ok: true, stored: supabaseOk });
 }
