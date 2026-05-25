@@ -1,0 +1,12 @@
+# materiały źródłowe (nie trzymamy w repo — w razie potrzeby kopia lokalna)
+Oferta.zip
+oferta-unzipped/
+foto/
+
+# logi / tymczasowe
+*.log
+debug.log
+
+# OS
+.DS_Store
+Thumbs.db
