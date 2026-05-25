@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { Send, CircleCheck, Phone, Mail, MapPin } from "lucide-react";
+import { Send, CircleCheck, MapPin } from "lucide-react";
 
 const schema = z.object({
   name: z.string().min(2, "Podaj imię (min. 2 znaki)"),
@@ -79,9 +79,7 @@ export function LeadForm() {
               i razem ustalimy, czy moja praca pasuje do tego, czego potrzebujesz.
             </p>
 
-            <div className="mt-10 space-y-4">
-              <Contact icon={Phone} label="Telefon" value="+48 000 000 000" href="tel:+48000000000" />
-              <Contact icon={Mail} label="E-mail" value="kontakt@bartoszolszewski.pl" href="mailto:kontakt@bartoszolszewski.pl" />
+            <div className="mt-10">
               <Contact icon={MapPin} label="Lokalizacja" value="Wejherowo, woj. pomorskie" />
             </div>
           </motion.div>

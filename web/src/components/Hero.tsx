@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
 export function Hero() {
   return (
@@ -77,18 +77,9 @@ export function Hero() {
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                <div>
-                  <div className="text-white font-bold text-lg leading-tight">Bartosz Olszewski</div>
-                  <div className="text-white/70 text-xs uppercase tracking-widest">Certyfikowany trener personalny</div>
-                </div>
-                <a
-                  href="tel:+48000000000"
-                  className="grid place-items-center w-11 h-11 rounded-full bg-white text-black hover:scale-110 transition-transform"
-                  aria-label="Zadzwoń"
-                >
-                  <Phone size={16} />
-                </a>
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="text-white font-bold text-lg leading-tight">Bartosz Olszewski</div>
+                <div className="text-white/70 text-xs uppercase tracking-widest">Certyfikowany trener personalny</div>
               </div>
             </div>
           </div>
