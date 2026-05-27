@@ -84,10 +84,11 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-8 border ${
+              style={{ isolation: "isolate" }}
+              className={`relative rounded-3xl p-8 border backdrop-blur-none ${
                 p.highlight
-                  ? "bg-gradient-to-br from-red-500/15 via-orange-500/5 to-white/[0.02] border-red-500/40 shadow-2xl shadow-red-500/10"
-                  : "bg-white/[0.02] border-white/10"
+                  ? "bg-[#141417] border-red-500/40 shadow-2xl shadow-red-500/10"
+                  : "bg-[#111114] border-white/10"
               }`}
             >
               {p.highlight && (
