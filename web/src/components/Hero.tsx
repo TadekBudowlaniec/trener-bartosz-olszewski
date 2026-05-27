@@ -52,9 +52,10 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
+          <div className="mt-12 grid grid-cols-4 gap-6 max-w-xl">
             <Stat value="6+" label="lat doświadczenia" />
             <Stat value="150+" label="metamorfoz" />
+            <Stat value="2×🥈" label="zawody NPC" />
             <Stat value="4.9" label="ocena podopiecznych" />
           </div>
         </motion.div>

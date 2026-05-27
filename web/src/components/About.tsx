@@ -65,6 +65,14 @@ export function About() {
             ale efekty stanęły w miejscu. Bez ściemy, bez magicznych suplementów —
             tylko dobrze ułożony trening, prosta dieta i konsekwencja.
           </p>
+          <p className="mt-4 text-lg text-white/65 leading-relaxed">
+            Dwukrotnie startowałem w zawodach{" "}
+            <span className="font-semibold text-white">NPC</span> — najbardziej
+            prestiżowej federacji kulturystyki na świecie —{" "}
+            <span className="font-semibold text-white">za każdym razem zdobywając 2.&nbsp;miejsce</span>.
+            To doświadczenie nauczyło mnie, jak przygotować ciało na najwyższym
+            poziomie i przenieść tę wiedzę na treningi moich podopiecznych.
+          </p>
 
           <ul className="mt-8 grid sm:grid-cols-2 gap-4">
             {POINTS.map((p) => (
